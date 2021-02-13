@@ -1,0 +1,20 @@
+import math
+
+def anglesumtest(A,B):
+  errmax=1e-15    #  initial value
+  
+  print(errmax)
+  print(type(errmax))   
+  
+  a=math.radians(A)                   
+  b=math.radians(B)            
+  x=math.cos(a+b)           
+  y=math.cos(a)*math.cos(b)-math.sin(a)*math.sin(b)   
+  e=math.fabs(x-y)
+  print(e)        # final value after calculation
+  if e<errmax:
+    return True
+  else:
+    return False
+    
+print(anglesumtest(30,45))
